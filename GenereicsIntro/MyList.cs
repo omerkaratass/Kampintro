@@ -11,9 +11,11 @@ namespace GenereicsIntro
     {
         T[] items;
 
+        // Bir Array'in newlenme zorunluluğu var Referans bir tip olduğu için.
         // Bir Class newlendiğinde çalışan kod bloğuna Constructor denir.
         public MyList()
         {
+            // Newlediğim anda 0 elemanlı bir array oluşturdum.
             items = new T[0];
         }
         // Bana T türünde bir item(eleman) ver integer string bool array değer tiplerinden birisi.
@@ -22,10 +24,10 @@ namespace GenereicsIntro
             // T türündeli Array'imi newlediğim zaman eski değerlerim uçmasın diye
             // Geçici bir değişkeni items'a tutturuyorum.
             T[] tempArray = items;
-            // Dizinin elaman sayısını 1 arttır.
+            // Dizinin elaman sayısını 1 arttır. 'İtems.Length' Dizinin elaman sayısıdır.
             items = new T[items.Length+1];
 
-            for (int i = 0; i < tempArray.Length; i++)
+             for (int i = 0; i < tempArray.Length; i++)
             {
                 items[i] = tempArray[i];
             }
